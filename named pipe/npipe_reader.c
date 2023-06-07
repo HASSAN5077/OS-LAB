@@ -17,7 +17,6 @@ int main(int argc, char *argv[]){
 		perror("Unable to open pipe");
 		return 1;
 	}
-	sprintf(buffer,"process %d says AOA",getpid());
 	if((res=read(pipe_fd,buffer,BUFFER_SIZE))==-1){
 		perror("Unable to read to pipe");
 		return 1;
